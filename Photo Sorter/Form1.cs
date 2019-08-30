@@ -16,5 +16,16 @@ namespace Photo_Sorter
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Testing button functions
+            MessageBoxButtons closeDiag = MessageBoxButtons.OK;
+            DialogResult testResult = MessageBox.Show("Test successful! Click OK to close.");
+            if (testResult == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
     }
 }
