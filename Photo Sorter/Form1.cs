@@ -21,12 +21,22 @@ namespace Photo_Sorter
 
         private void AutoDetectButton_Click(object sender, EventArgs e)
         {
-
+            //Testing button functions
+            DialogResult testResult = MessageBox.Show("AutoDetect Test Successful! Click OK to close.");
+            if (testResult == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void BrowseButton_Click(object sender, EventArgs e)
         {
-
+            //Testing button functions
+            DialogResult testResult = MessageBox.Show("Browse Test Successful! Click OK to close.");
+            if (testResult == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void SDCardLabel_Click(object sender, EventArgs e)
