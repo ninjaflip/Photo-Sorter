@@ -17,23 +17,24 @@ namespace Photo_Sorter
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Testing button functions
-            MessageBoxButtons closeDiag = MessageBoxButtons.OK;
-            DialogResult testResult = MessageBox.Show("Test successful! Click OK to close.");
-            if (testResult == DialogResult.OK)
-            {
-                this.Close();
-            }
-        }
+        //All Form Components
 
-        private void label1_Click(object sender, EventArgs e)
+        private void AutoDetectButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void BrowseButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SDCardLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FilePathText_TextChanged(object sender, EventArgs e)
         {
 
         }
