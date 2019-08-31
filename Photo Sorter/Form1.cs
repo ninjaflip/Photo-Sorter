@@ -15,35 +15,53 @@ namespace Photo_Sorter
         public Form1()
         {
             InitializeComponent();
-        }
 
-        //All Form Components
-
-        private void AutoDetectButton_Click(object sender, EventArgs e)
-        {
-            //Testing button functions
-            DialogResult testResult = MessageBox.Show("AutoDetect Test Successful! Click OK to close.");
-            if (testResult == DialogResult.OK)
-            {
-                this.Close();
-            }
         }
+        //Variables within the class
+        String FolderPath;
+
+        //Buttons section
 
         private void BrowseButton_Click(object sender, EventArgs e)
         {
-                FolderBrowserDialog imgFolder = new FolderBrowserDialog();
-                if(imgFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    FilePathText.Text = imgFolder.SelectedPath;
-                }
+            FolderBrowserDialog SelectedFolder = new FolderBrowserDialog();
+
+            //Folder browser properties
+            SelectedFolder.ShowNewFolderButton = false;
+            SelectedFolder.Description = "Select folder to be sorted";
+            if (SelectedFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                FilePathText.Text = SelectedFolder.SelectedPath;
+                FolderPath = SelectedFolder.SelectedPath;
+            }
         }
 
-        private void SDCardLabel_Click(object sender, EventArgs e)
+        private void AutoDetectButton_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            if(FolderPath != null)
+            {
+                DialogResult test = MessageBox.Show(FolderPath);
+            }
+            else if(FolderPath == null)
+            {
+                DialogResult test = MessageBox.Show("No folder selected!");
+            }
+        }
+
+
+        //Labels and textbox section
         private void FilePathText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void SDCardLabel_Click(object sender, EventArgs e)
         {
 
         }

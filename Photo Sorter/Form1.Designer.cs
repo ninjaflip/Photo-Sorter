@@ -32,6 +32,7 @@
             this.AutoDetectButton = new System.Windows.Forms.Button();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.SDCardLabel = new System.Windows.Forms.Label();
+            this.NextButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FilePathText
@@ -73,11 +74,23 @@
             this.SDCardLabel.Text = "SD Card Path";
             this.SDCardLabel.Click += new System.EventHandler(this.SDCardLabel_Click);
             // 
+            // NextButton
+            // 
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.Location = new System.Drawing.Point(223, 73);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(84, 24);
+            this.NextButton.TabIndex = 7;
+            this.NextButton.Text = "Next";
+            this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(521, 120);
+            this.Controls.Add(this.NextButton);
             this.Controls.Add(this.SDCardLabel);
             this.Controls.Add(this.BrowseButton);
             this.Controls.Add(this.AutoDetectButton);
@@ -94,6 +107,7 @@
         private System.Windows.Forms.Button AutoDetectButton;
         private System.Windows.Forms.Button BrowseButton;
         private System.Windows.Forms.Label SDCardLabel;
+        private System.Windows.Forms.Button NextButton;
     }
 }
 
