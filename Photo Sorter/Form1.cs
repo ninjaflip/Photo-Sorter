@@ -31,26 +31,11 @@ namespace Photo_Sorter
 
         private void BrowseButton_Click(object sender, EventArgs e)
         {
-            //Testing button functions
-            /*
-            DialogResult testResult = MessageBox.Show("Browse Test Successful! Click OK to close.");
-            if (testResult == DialogResult.OK)
-            {
-                this.Close();
-            }
-            */
-            try
-            {
                 FolderBrowserDialog imgFolder = new FolderBrowserDialog();
                 if(imgFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    MessageBox.Show("Test");
+                    FilePathText.Text = imgFolder.SelectedPath;
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void SDCardLabel_Click(object sender, EventArgs e)
