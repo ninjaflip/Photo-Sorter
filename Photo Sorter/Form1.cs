@@ -41,20 +41,10 @@ namespace Photo_Sorter
             */
             try
             {
-                OpenFileDialog imgObj = new OpenFileDialog();
-
-                //filters that object to open certain image files
-                //Version 1.0: Support for ARW files so far 
-                imgObj.Filter = "Image Files (*.jpg;*.jpeg;*.arw)|*.jpg;*.jpeg;*.arw";
-                imgObj.Title = "Selecting files...";
-
-                //Setting initial directory to SD card
-
-                imgObj.Multiselect = true;
-                //if the file dialog opens, grab the location of the image and its filename
-                if (imgObj.ShowDialog() == DialogResult.OK)                                                            
+                FolderBrowserDialog imgFolder = new FolderBrowserDialog();
+                if(imgFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    FilePathText.Text = imgObj.FileName;
+                    MessageBox.Show("Test");
                 }
             }
             catch (Exception)
