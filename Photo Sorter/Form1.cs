@@ -38,7 +38,7 @@ namespace Photo_Sorter
 
         private void AutoDetectButton_Click(object sender, EventArgs e)
         {
-
+            //Test
         }
 
         private void NextButton_Click(object sender, EventArgs e)
