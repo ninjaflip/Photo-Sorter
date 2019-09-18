@@ -16,10 +16,14 @@ namespace Photo_Sorter
         {
             InitializeComponent();
 
+            //Set properties for parts of app when it loads
+            NextButton.Enabled = false;
+            FilePathText.ReadOnly = true;
         }
+
         //Variables within the class
         String FolderPath;
-
+    
         //Buttons section
 
         private void BrowseButton_Click(object sender, EventArgs e)
@@ -33,24 +37,17 @@ namespace Photo_Sorter
             {
                 FilePathText.Text = SelectedFolder.SelectedPath;
                 FolderPath = SelectedFolder.SelectedPath;
+                if(FolderPath != null)
+                {
+                    NextButton.Enabled = true;
+                }
             }
-        }
-
-        private void AutoDetectButton_Click(object sender, EventArgs e)
-        {
-            //Test
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            if(FolderPath != null)
-            {
-                DialogResult test = MessageBox.Show(FolderPath);
-            }
-            else if(FolderPath == null)
-            {
-                DialogResult test = MessageBox.Show("No folder selected!");
-            }
+            
+            
         }
 
 

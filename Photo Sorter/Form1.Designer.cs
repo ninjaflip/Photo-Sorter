@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.FilePathText = new System.Windows.Forms.TextBox();
-            this.AutoDetectButton = new System.Windows.Forms.Button();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.SDCardLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
@@ -43,21 +42,11 @@
             this.FilePathText.TabIndex = 2;
             this.FilePathText.TextChanged += new System.EventHandler(this.FilePathText_TextChanged);
             // 
-            // AutoDetectButton
-            // 
-            this.AutoDetectButton.Location = new System.Drawing.Point(431, 47);
-            this.AutoDetectButton.Name = "AutoDetectButton";
-            this.AutoDetectButton.Size = new System.Drawing.Size(87, 20);
-            this.AutoDetectButton.TabIndex = 3;
-            this.AutoDetectButton.Text = "Auto-Detect";
-            this.AutoDetectButton.UseVisualStyleBackColor = true;
-            this.AutoDetectButton.Click += new System.EventHandler(this.AutoDetectButton_Click);
-            // 
             // BrowseButton
             // 
             this.BrowseButton.Location = new System.Drawing.Point(338, 47);
             this.BrowseButton.Name = "BrowseButton";
-            this.BrowseButton.Size = new System.Drawing.Size(87, 20);
+            this.BrowseButton.Size = new System.Drawing.Size(100, 20);
             this.BrowseButton.TabIndex = 4;
             this.BrowseButton.Text = "Browse";
             this.BrowseButton.UseVisualStyleBackColor = true;
@@ -76,10 +65,10 @@
             // 
             // NextButton
             // 
-            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.Location = new System.Drawing.Point(223, 73);
+            this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextButton.Location = new System.Drawing.Point(444, 47);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(84, 24);
+            this.NextButton.Size = new System.Drawing.Size(100, 20);
             this.NextButton.TabIndex = 7;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
@@ -89,11 +78,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(521, 120);
+            this.ClientSize = new System.Drawing.Size(548, 110);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.SDCardLabel);
             this.Controls.Add(this.BrowseButton);
-            this.Controls.Add(this.AutoDetectButton);
             this.Controls.Add(this.FilePathText);
             this.Name = "Form1";
             this.Text = "Photo Sorter";
@@ -104,7 +92,6 @@
 
         #endregion
         private System.Windows.Forms.TextBox FilePathText;
-        private System.Windows.Forms.Button AutoDetectButton;
         private System.Windows.Forms.Button BrowseButton;
         private System.Windows.Forms.Label SDCardLabel;
         private System.Windows.Forms.Button NextButton;
