@@ -1,6 +1,6 @@
 ﻿Things to do for this project:
 	+ - Fix 'Browse' Button to properly open and browse for folders.
-	  - Fix 'Auto-Detect' Button to properly browse and select folder containing images without user intervention
+	x - Fix 'Auto-Detect' Button to properly browse and select folder containing images without user intervention
 	  - Add Check boxes that allow users to customize sorting operations
 	  
 

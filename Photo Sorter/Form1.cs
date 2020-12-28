@@ -19,11 +19,17 @@ namespace Photo_Sorter
             //Set properties for parts of app when it loads
             NextButton.Enabled = false;
             FilePathText.ReadOnly = true;
+
         }
 
         //Variables within the class
         String FolderPath;
-    
+
+        //Create list of Panels to enable next panel page
+        //index through them to move between each panel
+        List<Panel> panel_List = new List<Panel>();
+        int pageIndex;
+
         //Buttons section
 
         private void BrowseButton_Click(object sender, EventArgs e)
@@ -43,11 +49,24 @@ namespace Photo_Sorter
                 }
             }
         }
+        private void PrevButton_Click(object sender, EventArgs e)
+        {
+           //Brings previous page up
+           if(pageIndex > 0)
+            {
+                panel_List[--pageIndex].BringToFront();
+            }
+        }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            
-            
+           // Console.WriteLine(FolderPath);
+
+           //Brings next page up 
+           if(pageIndex < panel_List.Count -1)
+            {
+                panel_List[++pageIndex].BringToFront();
+            }
         }
 
 
@@ -61,6 +80,18 @@ namespace Photo_Sorter
         private void SDCardLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        //Form loader to load the panels
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //List of panels
+            panel_List.Add(ChooseFilePathPanel);
+            panel_List.Add(FolderSortingPanel);
+
+            //Bring to front the first panel
+            panel_List[pageIndex].BringToFront();
         }
 
     }
