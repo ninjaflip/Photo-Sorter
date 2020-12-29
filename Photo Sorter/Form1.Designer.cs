@@ -35,22 +35,25 @@
             this.ChooseFilePathPanel = new System.Windows.Forms.Panel();
             this.FolderSortingPanel = new System.Windows.Forms.Panel();
             this.PrevButton = new System.Windows.Forms.Button();
+            this.DestinationLabel = new System.Windows.Forms.Label();
+            this.DestinationText = new System.Windows.Forms.TextBox();
+            this.BrowseButton2 = new System.Windows.Forms.Button();
             this.ChooseFilePathPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // FilePathText
             // 
-            this.FilePathText.Location = new System.Drawing.Point(28, 111);
+            this.FilePathText.Location = new System.Drawing.Point(109, 67);
             this.FilePathText.Name = "FilePathText";
-            this.FilePathText.Size = new System.Drawing.Size(316, 20);
+            this.FilePathText.Size = new System.Drawing.Size(239, 20);
             this.FilePathText.TabIndex = 2;
             this.FilePathText.TextChanged += new System.EventHandler(this.FilePathText_TextChanged);
             // 
             // BrowseButton
             // 
-            this.BrowseButton.Location = new System.Drawing.Point(132, 157);
+            this.BrowseButton.Location = new System.Drawing.Point(364, 67);
             this.BrowseButton.Name = "BrowseButton";
-            this.BrowseButton.Size = new System.Drawing.Size(100, 20);
+            this.BrowseButton.Size = new System.Drawing.Size(104, 20);
             this.BrowseButton.TabIndex = 4;
             this.BrowseButton.Text = "Browse";
             this.BrowseButton.UseVisualStyleBackColor = true;
@@ -59,10 +62,10 @@
             // SDCardLabel
             // 
             this.SDCardLabel.AutoSize = true;
-            this.SDCardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SDCardLabel.Location = new System.Drawing.Point(119, 63);
+            this.SDCardLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SDCardLabel.Location = new System.Drawing.Point(4, 69);
             this.SDCardLabel.Name = "SDCardLabel";
-            this.SDCardLabel.Size = new System.Drawing.Size(122, 24);
+            this.SDCardLabel.Size = new System.Drawing.Size(99, 18);
             this.SDCardLabel.TabIndex = 6;
             this.SDCardLabel.Text = "SD Card Path";
             this.SDCardLabel.Click += new System.EventHandler(this.SDCardLabel_Click);
@@ -80,12 +83,15 @@
             // 
             // ChooseFilePathPanel
             // 
+            this.ChooseFilePathPanel.Controls.Add(this.BrowseButton2);
+            this.ChooseFilePathPanel.Controls.Add(this.DestinationText);
+            this.ChooseFilePathPanel.Controls.Add(this.DestinationLabel);
             this.ChooseFilePathPanel.Controls.Add(this.SDCardLabel);
             this.ChooseFilePathPanel.Controls.Add(this.FilePathText);
             this.ChooseFilePathPanel.Controls.Add(this.BrowseButton);
-            this.ChooseFilePathPanel.Location = new System.Drawing.Point(62, 12);
+            this.ChooseFilePathPanel.Location = new System.Drawing.Point(12, 12);
             this.ChooseFilePathPanel.Name = "ChooseFilePathPanel";
-            this.ChooseFilePathPanel.Size = new System.Drawing.Size(375, 232);
+            this.ChooseFilePathPanel.Size = new System.Drawing.Size(480, 232);
             this.ChooseFilePathPanel.TabIndex = 8;
             // 
             // FolderSortingPanel
@@ -105,6 +111,33 @@
             this.PrevButton.Text = "Previous";
             this.PrevButton.UseVisualStyleBackColor = true;
             this.PrevButton.Click += new System.EventHandler(this.PrevButton_Click);
+            // 
+            // DestinationLabel
+            // 
+            this.DestinationLabel.AutoSize = true;
+            this.DestinationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DestinationLabel.Location = new System.Drawing.Point(3, 121);
+            this.DestinationLabel.Name = "DestinationLabel";
+            this.DestinationLabel.Size = new System.Drawing.Size(90, 20);
+            this.DestinationLabel.TabIndex = 7;
+            this.DestinationLabel.Text = "Destination";
+            // 
+            // DestinationText
+            // 
+            this.DestinationText.Location = new System.Drawing.Point(109, 121);
+            this.DestinationText.Name = "DestinationText";
+            this.DestinationText.Size = new System.Drawing.Size(239, 20);
+            this.DestinationText.TabIndex = 2;
+            // 
+            // BrowseButton2
+            // 
+            this.BrowseButton2.Location = new System.Drawing.Point(364, 121);
+            this.BrowseButton2.Name = "BrowseButton2";
+            this.BrowseButton2.Size = new System.Drawing.Size(104, 20);
+            this.BrowseButton2.TabIndex = 9;
+            this.BrowseButton2.Text = "Browse";
+            this.BrowseButton2.UseVisualStyleBackColor = true;
+            this.BrowseButton2.Click += new System.EventHandler(this.BrowseButton2_Click);
             // 
             // Form1
             // 
@@ -132,6 +165,9 @@
         private System.Windows.Forms.Panel ChooseFilePathPanel;
         private System.Windows.Forms.Panel FolderSortingPanel;
         private System.Windows.Forms.Button PrevButton;
+        private System.Windows.Forms.Button BrowseButton2;
+        private System.Windows.Forms.TextBox DestinationText;
+        private System.Windows.Forms.Label DestinationLabel;
     }
 }
 

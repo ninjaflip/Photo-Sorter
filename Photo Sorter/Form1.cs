@@ -19,11 +19,12 @@ namespace Photo_Sorter
             //Set properties for parts of app when it loads
             NextButton.Enabled = false;
             FilePathText.ReadOnly = true;
-
+            DestinationText.ReadOnly = true;
         }
 
         //Variables within the class
         String FolderPath;
+        Boolean SourceFilePathChosen = false;
 
         //Create list of Panels to enable next panel page
         //index through them to move between each panel
@@ -38,17 +39,38 @@ namespace Photo_Sorter
 
             //Folder browser properties
             SelectedFolder.ShowNewFolderButton = false;
-            SelectedFolder.Description = "Select folder to be sorted";
+            SelectedFolder.Description = "Select folder to be sorted.";
             if (SelectedFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 FilePathText.Text = SelectedFolder.SelectedPath;
                 FolderPath = SelectedFolder.SelectedPath;
                 if(FolderPath != null)
                 {
+                    SourceFilePathChosen = true;
+                }
+            }
+        }
+
+        private void BrowseButton2_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog SelectedFolder = new FolderBrowserDialog();
+
+            //Folder browser properties
+            SelectedFolder.ShowNewFolderButton = false;
+            SelectedFolder.Description = "Select destination for copied items.";
+            if (SelectedFolder.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                DestinationText.Text = SelectedFolder.SelectedPath;
+                FolderPath = SelectedFolder.SelectedPath;
+                if (FolderPath != null && SourceFilePathChosen == true)
+                {
                     NextButton.Enabled = true;
                 }
             }
         }
+
+
+
         private void PrevButton_Click(object sender, EventArgs e)
         {
            //Brings previous page up
@@ -93,6 +115,7 @@ namespace Photo_Sorter
             //Bring to front the first panel
             panel_List[pageIndex].BringToFront();
         }
+
 
     }
 }
